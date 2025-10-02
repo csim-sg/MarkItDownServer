@@ -1,5 +1,7 @@
 # Use the official Python image from the Docker Hub
-FROM python:3.12-slim
+FROM python:3.12.11-bookworm
+
+RUN apt update -y && apt install ffmpeg -y
 
 # Set the working directory in the container
 WORKDIR /app
